@@ -1,0 +1,308 @@
+{
+  "sidebar": {
+    "title": "Sentinel Forge",
+    "subtitle": "Центр Зависимостей",
+    "tooltipAdd": "Добавить репозиторий",
+    "emptyState": "Нет рабочих областей.\nНажмите +, чтобы добавить.",
+    "removeTooltip": "Удалить рабочую область",
+    "groupMaintenance": "Обслуживание",
+    "groupAudit": "Аудит и Обновление",
+    "btnDedupe": "Дедупликация",
+    "btnSync": "Принудительная Синхр.",
+    "btnClean": "Очистить Кэш",
+    "btnOutdated": "Устаревшие Пакеты",
+    "btnUpgrade": "Обновить",
+    "btnUpgradeLatest": "Обновить (Latest)",
+    "btnAddLocal": "Локальная Папка",
+    "btnAddRemote": "Git URL",
+    "modalRemoteTitle": "Подключить Удаленный Репозиторий",
+    "modalCancel": "Отмена",
+    "modalConnect": "Подключить",
+    "modalPrivate": "Приватный Репозиторий (SSH)",
+    "modalSshPlaceholder": "Путь к ключу (напр. ~/.ssh/id_rsa)",
+    "btnSelect": "Обзор",
+    "exportGlobal": "Экспорт Отчета",
+    "newWorkspaceBtn": "+ СОЗДАТЬ РАБОЧУЮ ОБЛАСТЬ",
+    "createWorkspaceTitle": "Имя Рабочей Области",
+    "createWorkspacePlaceholder": "напр., Портфолио, Клиент X",
+    "btnCreateWorkspace": "Создать",
+    "destroyWarningTitle": "Внимание: Критическое Удаление",
+    "destroyWarningText1": "Вы уверены, что хотите удалить рабочую область",
+    "destroyWarningText2": "и все связанные с ней проекты?",
+    "btnDestroyAll": "Удалить Все",
+    "remoteBadge": "Удаленный",
+    "openDocs": "Открыть Документацию"
+  },
+  "emptyState": {
+    "waiting": "Ожидание выбора цели..."
+  },
+  "terminal": {
+    "bootEngine": "Движок Аудита Инициализирован.",
+    "bootIpc": "IPC Щит Работает. Ожидание команд...",
+    "apiError": "Preload API недоступен (window.api). Проверьте политики contextIsolation.",
+    "standby": "Ожидание",
+    "running": "Выполнение нативного потока...",
+    "clearConsole": "Очистить Консоль",
+    "minimize": "Свернуть Терминал",
+    "maximize": "Развернуть Терминал",
+    "criticalErrorPrefix": "[КРИТИЧЕСКАЯ ОШИБКА]:"
+  },
+  "messages": {
+    "apiError": "\n[ОШИБКА]: Electron API недоступен.\n",
+    "alreadyMapped": "\n[ПРЕДУПРЕЖДЕНИЕ]: Директория {{path}} уже добавлена.\n",
+    "workspaceAdded": "\n[СИСТЕМА]: Рабочая область добавлена: {{name}} [Менеджер: {{manager}}]\n",
+    "workspaceRemoved": "\n[СИСТЕМА]: Рабочая область удалена: {{name}}\n",
+    "startingCommand": "\n[СИСТЕМА]: Запуск {{action}} через {{manager}} в:\n📂 {{path}}\n---",
+    "auditComplete": "\n[СИСТЕМА]: Аудит безопасности завершен. Загрузка тактической панели...\n",
+    "auditError": "\n[ОШИБКА АУДИТА]: {{error}}\n",
+    "exportSuccessTitle": "Успешный Экспорт",
+    "exportSuccessBody": "Сохранено как {{format}}.",
+    "exportCLevelTitle": "C-Level Отчет",
+    "exportCLevelBody": "Отчет по рабочей области экспортирован как {{format}}.",
+    "exportSbomTitle": "Корпоративный Комплаенс",
+    "exportSbomBody": "CycloneDX SBOM успешно сгенерирован и экспортирован!",
+    "exportErrorTitle": "Ошибка Экспорта",
+    "exportErrorBody": "Не удалось экспортировать отчет.",
+    "cacheError": "Не удалось прочитать кэш проектов.",
+    "settingsError": "Ошибка чтения настроек, восстановление по умолчанию."
+  },
+  "actions": {
+    "dedupeName": "Дедупликация",
+    "syncName": "Принудительная Установка",
+    "cleanName": "Очистка Кэша",
+    "outdatedName": "Поиск Устаревших Пакетов",
+    "upgradeName": "Обновление Пакетов",
+    "upgradeLatestName": "Обновление до Последней Версии",
+    "auditName": "SecOps Сканирование",
+    "auditFixName": "Авто-устранение Угроз"
+  },
+  "dashboard": {
+    "radarTitle": "Радар Угроз и Тех. Долга",
+    "tacticalTitle": "Тактическая Панель",
+    "close": "ЗАКРЫТЬ",
+    "defaultWorkspace": "Стандартная Область",
+    "unknownRepo": "Неизвестный Репозиторий",
+    "exportLabel": "Экспорт:",
+    "tabs": {
+      "overview": "Обзор",
+      "cve": "Угрозы",
+      "outdated": "Тех. Долг",
+      "sast": "Секреты (SAST)"
+    },
+    "overview": {
+      "riskScore": "Глобальный Индекс Риска",
+      "sastCard": "Секреты в Коде (SAST)",
+      "btnViewFiles": "Смотреть Файлы",
+      "btnMethodology": "Методология",
+      "levels": {
+        "critical": "Крит.",
+        "high": "Высокий",
+        "moderate": "Средний",
+        "low": "Низкий",
+        "info": "Инфо",
+        "outdated": "Устаревшие"
+      }
+    },
+    "cve": {
+      "btnAutoFix": "Попытка Авто-Устранения (Fix)",
+      "safe": "СИСТЕМА БЕЗОПАСНА. УГРОЗ НЕ ОБНАРУЖЕНО.",
+      "vector": "Вектор",
+      "direct": "Прямая Зависимость",
+      "transitive": "Транзитивная",
+      "origin": "Происхождение",
+      "introducedBy": "Внедрено",
+      "mitigation": "Смягчение",
+      "updateTo": "Обновить до",
+      "manualFix": "Требуется ручное исправление",
+      "advisory": "Официальный Бюллетень",
+      "sourceOsv": "Угроза обнаружена глобальной базой данных OSV.dev (Google)",
+      "sourceLocal": "Угроза обнаружена локальным менеджером пакетов"
+    },
+    "sast": {
+      "safe": "ЧИСТЫЙ КОД. СЕКРЕТЫ И УЧЕТНЫЕ ДАННЫЕ НЕ ОБНАРУЖЕНЫ.",
+      "alert": "Критическая Тревога: Жестко закодированные данные",
+      "line": "Строка",
+      "file": "Файл",
+      "foundValue": "Найденное Значение"
+    },
+    "outdated": {
+      "package": "Пакет",
+      "current": "Текущая Версия",
+      "wanted": "Ожидаемая (Wanted)",
+      "latest": "Последняя (Latest)",
+      "safe": "Нет технического долга! Все пакеты обновлены."
+    },
+    "methodology": {
+      "title": "Методология Оценки (Risk Score)",
+      "description": "Risk Score — это логарифмический индекс (от 0 до 100), оценивающий структурное состояние безопасности репозитория. Чем выше балл, тем критичнее необходимость вмешательства.",
+      "rules": {
+        "sast": "Утечка Секрета (SAST):",
+        "sastVal": "Автоматическая Оценка F",
+        "critical": "Критическая Угроза:",
+        "criticalVal": "+25 Баллов",
+        "high": "Высокая Угроза:",
+        "highVal": "+15 Баллов",
+        "moderate": "Средняя Угроза:",
+        "moderateVal": "+5 Баллов",
+        "low": "Низкая Угроза:",
+        "lowVal": "+2 Балла",
+        "outdated": "Устаревший Пакет:",
+        "outdatedVal": "+1 Балл"
+      },
+      "grades": {
+        "a": "A (0 б.)",
+        "aDesc": "Чистая и Обновленная Система.",
+        "b": "B (1 - 20 б.)",
+        "bDesc": "Внимание. Легкий тех. долг.",
+        "c": "C (21 - 50 б.)",
+        "cDesc": "Умеренный Риск.",
+        "d": "D (51 - 80 б.)",
+        "dDesc": "Высокий Риск. Требуются приоритетные действия.",
+        "f": "F (81+ б. или SAST)",
+        "fDesc": "Критический Риск. Немедленное вмешательство."
+      }
+    }
+  },
+  "projectCard": {
+    "remoteBadge": "Удаленный",
+    "cleanStatus": "Чисто",
+    "btnUpgradeGui": "Обновить",
+    "upgradeAction": "Обновление Пакетов"
+  },
+  "upgradeModal": {
+    "title": "Менеджер Обновлений",
+    "close": "ЗАКРЫТЬ",
+    "emptyState": "Технический долг не найден. Все пакеты имеют версию 'latest'.",
+    "table": {
+      "package": "Пакет",
+      "current": "Текущая",
+      "target": "Latest (Цель)"
+    },
+    "btnForceAll": "Принудительно Обновить Все",
+    "btnUpdateSelected": "Обновить Выбранные ({{count}})"
+  },
+  "settingsModal": {
+    "title": "Системные Настройки",
+    "scanIntervalLabel": "Интервал Сканирования (Фоновый)",
+    "scanIntervalDesc": "Определяет частоту автоматического аудита проектов на наличие новых уязвимостей и CVE.",
+    "btnApplyClose": "Применить и Закрыть",
+    "intervals": {
+      "1m": "1 Минута (Тест / Дебаг)",
+      "1h": "1 Час (Корпоративный Стандарт)",
+      "6h": "6 Часов (Баланс Ресурсов)",
+      "12h": "12 Часов (Дневное Сканирование)",
+      "24h": "24 Часа (Макс. Экономия)"
+    }
+  },
+  "loader": {
+    "step1": "Инициализация SecOps Движка...",
+    "step2": "Установка IPC Моста...",
+    "step3": "Загрузка Модулей Разведки...",
+    "step4": "Операционные Системы.",
+    "subtitle": "Инфраструктура Безопасности",
+    "builtBy": "создано DevChavatte"
+  },
+  "projectStats": {
+    "telemetry": "Телеметрия:",
+    "emptyStateLine1": "Данные телеметрии еще не собраны.",
+    "emptyStateLine2": "Запустите Аудит Безопасности для начала отслеживания.",
+    "lastScans": "Последние 5 Сканирований",
+    "tooltipReport": "Нажмите, чтобы открыть полный Отчет",
+    "levels": {
+      "critical": "КРИТ.",
+      "high": "ВЫСОК.",
+      "moderate": "СРЕДН.",
+      "low": "НИЗК.",
+      "outdated": "УСТАРЕВШ."
+    },
+    "tags": {
+      "clean": "ЧИСТО",
+      "vuln": "{{count}} УЯЗВ.",
+      "outdated": "{{count}} УСТАР."
+    }
+  },
+  "semver": {
+    "major": "MAJOR",
+    "minor": "MINOR",
+    "patch": "PATCH"
+  },
+  "socMonitor": {
+    "unknownProject": "добавленный проект",
+    "alertTitle": "⚠️ SecOps Тревога (Фон)",
+    "alertBody": "Sentinel обнаружил {{count}} скрытых уязвимостей в репозитории: {{project}}."
+  },
+  "titlebar": {
+    "appTitle": "Sentinel Forge",
+    "appSubtitle": "Тактический EDR",
+    "minimize": "Свернуть",
+    "maximize": "Развернуть / Восстановить",
+    "close": "Выключить Движок"
+  },
+  "reports": {
+    "unknownRepo": "Неизвестный Репозиторий",
+    "defaultWorkspace": "Стандартная Область",
+    "workspaceLabel": "Рабочая Область",
+    "repositoryLabel": "Репозиторий",
+    "scanDateLabel": "Дата Сканирования",
+    "issueDateLabel": "Дата Выпуска",
+    "cleanSystemTitle": "✅ СИСТЕМА ЧИСТА",
+    "cleanSystemDesc": "Секреты, угрозы (CVE) или устаревшие пакеты не обнаружены.",
+    "sastTitle": "🕵️ Раскрытые Секреты (SAST)",
+    "sastHeaders": {
+      "alert": "Тревога",
+      "type": "Тип Данных",
+      "location": "Расположение",
+      "value": "Значение (Скрыто)"
+    },
+    "cveTitle": "🚨 Детализация Угроз (CVE)",
+    "cveHeaders": {
+      "severity": "Уровень",
+      "packageVector": "Пакет / Вектор",
+      "vulnRef": "Уязвимость и Ссылка",
+      "mitigation": "Решение"
+    },
+    "outdatedTitle": "⚠️ Технический Долг (Устаревшие Пакеты)",
+    "outdatedHeaders": {
+      "package": "Пакет",
+      "current": "Текущая Версия",
+      "wanted": "Ожидаемая",
+      "latest": "Последняя"
+    },
+    "tacticalReportTitle": "Отчет о Тактическом Аудите",
+    "consolidatedReportTitle": "Сводный Отчет Руководства",
+    "noTelemetry": "Нет данных телеметрии",
+    "telemetryStatusTitle": "Статус Телеметрии по Репозиториям",
+    "telemetryHeaders": {
+      "repository": "Репозиторий",
+      "sast": "SAST",
+      "critical": "Крит.",
+      "high": "Высок.",
+      "moderate": "Средн.",
+      "low": "Низк.",
+      "info": "Инфо",
+      "outdated": "Устар."
+    },
+    "target": "🎯 Цель:",
+    "telemetryXrayTitle": "Рентген Телеметрии по Репозиториям",
+    "footer": "Тактический отчет сгенерирован движком <strong>{{title}} EDR</strong>. © {{year}} DeVChavatte.",
+    "sastTag": "СЕКРЕТ (SAST)",
+    "line": "Строка",
+    "unspecifiedVuln": "Уязвимость не указана",
+    "noPatch": "Нет известного патча",
+    "updateTo": "Обновить до",
+    "availableViaAuditFix": "Доступно через audit fix",
+    "officialAdvisory": "🔗 Официальный Бюллетень",
+    "directDependency": "Прямая Зависимость",
+    "transitive": "Транзитивная",
+    "via": "через",
+    "multiple": "несколько",
+    "introducedBy": "🕵️ Внедрено:"
+  },
+  "updater": {
+    "newUpdate": "Новое обновление",
+    "readyToInstall": "Готово к установке. Движок SOC будет перезапущен.",
+    "restart": "Перезапустить",
+    "upToDate": "Обновлено",
+    "upToDateDesc": "Вы используете последнюю версию."
+  }
+}

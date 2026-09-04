@@ -1,0 +1,308 @@
+{
+  "sidebar": {
+    "title": "Sentinel Forge",
+    "subtitle": "Abhängigkeits-Zentrum",
+    "tooltipAdd": "Neues Repository zuordnen",
+    "emptyState": "Keine Workspaces zugeordnet.\nKlicken Sie auf das + zum Hinzufügen.",
+    "removeTooltip": "Workspace entfernen",
+    "groupMaintenance": "Wartung",
+    "groupAudit": "Audit & Update",
+    "btnDedupe": "Deduplizieren",
+    "btnSync": "Sync Erzwingen",
+    "btnClean": "Cache Leeren",
+    "btnOutdated": "Veraltete Prüfen",
+    "btnUpgrade": "Upgrade",
+    "btnUpgradeLatest": "Upgrade (Latest)",
+    "btnAddLocal": "Lokaler Ordner",
+    "btnAddRemote": "Git URL",
+    "modalRemoteTitle": "Remote-Repository Zuordnen",
+    "modalCancel": "Abbrechen",
+    "modalConnect": "Verbinden",
+    "modalPrivate": "Privates Repository (SSH-Auth)",
+    "modalSshPlaceholder": "Schlüsselpfad (z.B. ~/.ssh/id_rsa)",
+    "btnSelect": "Durchsuchen",
+    "exportGlobal": "Globaler Export",
+    "newWorkspaceBtn": "+ NEUEN WORKSPACE ERSTELLEN",
+    "createWorkspaceTitle": "Name des neuen Workspaces",
+    "createWorkspacePlaceholder": "z.B. Portfolio, Kunde X",
+    "btnCreateWorkspace": "Workspace Erstellen",
+    "destroyWarningTitle": "Warnung: Kritische Zerstörung",
+    "destroyWarningText1": "Sind Sie sicher, dass Sie den Workspace",
+    "destroyWarningText2": "und alle zugehörigen Projekte löschen möchten?",
+    "btnDestroyAll": "Alles Zerstören",
+    "remoteBadge": "Remote",
+    "openDocs": "Dokumentation Öffnen"
+  },
+  "emptyState": {
+    "waiting": "Warte auf Zielauswahl..."
+  },
+  "terminal": {
+    "bootEngine": "Audit-Engine Initialisiert.",
+    "bootIpc": "IPC-Schild Einsatzbereit. Warte auf Befehle...",
+    "apiError": "Preload API nicht verfügbar (window.api). Prüfen Sie contextIsolation-Richtlinien.",
+    "standby": "Bereit",
+    "running": "Nativer Thread läuft...",
+    "clearConsole": "Konsole Leeren",
+    "minimize": "Terminal Minimieren",
+    "maximize": "Terminal Maximieren",
+    "criticalErrorPrefix": "[KRITISCHER FEHLER]:"
+  },
+  "messages": {
+    "apiError": "\n[FEHLER]: Electron API nicht verfügbar.\n",
+    "alreadyMapped": "\n[WARNUNG]: Das Verzeichnis {{path}} ist bereits zugeordnet.\n",
+    "workspaceAdded": "\n[SYSTEM]: Workspace hinzugefügt: {{name}} [Erkannt: {{manager}}]\n",
+    "workspaceRemoved": "\n[SYSTEM]: Workspace entfernt: {{name}}\n",
+    "startingCommand": "\n[SYSTEM]: Starte {{action}} via {{manager}} in:\n📂 {{path}}\n---",
+    "auditComplete": "\n[SYSTEM]: Sicherheitsaudit abgeschlossen. Lade Taktisches Dashboard...\n",
+    "auditError": "\n[AUDIT FEHLER]: {{error}}\n",
+    "exportSuccessTitle": "Export Erfolgreich",
+    "exportSuccessBody": "Gespeichert als {{format}}.",
+    "exportCLevelTitle": "C-Level Bericht",
+    "exportCLevelBody": "Workspace-Bericht exportiert als {{format}}.",
+    "exportSbomTitle": "Corporate Compliance",
+    "exportSbomBody": "CycloneDX SBOM erfolgreich generiert und exportiert!",
+    "exportErrorTitle": "Export Fehler",
+    "exportErrorBody": "Fehler beim Exportieren des Workspace-Berichts.",
+    "cacheError": "Projekt-Cache konnte nicht gelesen werden.",
+    "settingsError": "Fehler beim Lesen der Einstellungen, lade Standardwerte."
+  },
+  "actions": {
+    "dedupeName": "Deduplizierung",
+    "syncName": "Erzwungene Installation",
+    "cleanName": "Cache Bereinigung",
+    "outdatedName": "Überprüfung Veralteter Pakete",
+    "upgradeName": "Paket Upgrade",
+    "upgradeLatestName": "Upgrade auf Neueste Version",
+    "auditName": "SecOps Scan",
+    "auditFixName": "Bedrohungs-Auto-Remediation"
+  },
+  "dashboard": {
+    "radarTitle": "Bedrohungs- & Tech-Debt-Radar",
+    "tacticalTitle": "Taktisches Dashboard",
+    "close": "SCHLIESSEN",
+    "defaultWorkspace": "Standard-Workspace",
+    "unknownRepo": "Unbekanntes Repository",
+    "exportLabel": "Bericht Exportieren:",
+    "tabs": {
+      "overview": "Übersicht",
+      "cve": "Bedrohungen",
+      "outdated": "Tech Debt",
+      "sast": "Geheimnisse (SAST)"
+    },
+    "overview": {
+      "riskScore": "Globaler Risikowert",
+      "sastCard": "Geheimnisse im Code (SAST)",
+      "btnViewFiles": "Dateien Anzeigen",
+      "btnMethodology": "Methodik Lesen",
+      "levels": {
+        "critical": "Kritisch",
+        "high": "Hoch",
+        "moderate": "Mittel",
+        "low": "Niedrig",
+        "info": "Info",
+        "outdated": "Veraltet"
+      }
+    },
+    "cve": {
+      "btnAutoFix": "Auto-Remediation Versuchen (Fix)",
+      "safe": "Sicheres System. Keine Bedrohungen erkannt.",
+      "vector": "Vektor",
+      "direct": "Direkte Abhängigkeit",
+      "transitive": "Transitiv",
+      "origin": "Ursprung",
+      "introducedBy": "Eingeführt von",
+      "mitigation": "Minderung",
+      "updateTo": "Aktualisieren auf",
+      "manualFix": "Manuelle Behebung erforderlich",
+      "advisory": "Offizielles Advisory",
+      "sourceOsv": "Bedrohung durch globale OSV.dev-Datenbank (Google) erkannt",
+      "sourceLocal": "Bedrohung durch lokalen Paketmanager erkannt"
+    },
+    "sast": {
+      "safe": "SAUBERER CODE. KEINE GEHEIMNISSE EXPONIERT.",
+      "alert": "Schwerwiegender Alarm: Hardcodierte Anmeldeinformationen",
+      "line": "Zeile",
+      "file": "Datei",
+      "foundValue": "Gefundener Wert"
+    },
+    "outdated": {
+      "package": "Paket",
+      "current": "Aktuelle Version",
+      "wanted": "Erwartet (Wanted)",
+      "latest": "Neueste (Latest)",
+      "safe": "Kein Tech Debt! Alle Pakete sind aktuell."
+    },
+    "methodology": {
+      "title": "Bewertungsmethodik (Risk Score)",
+      "description": "Der Risk Score ist ein logarithmischer Index (0 bis 100), der die strukturelle und sicherheitsrelevante Gesundheit Ihres Repositories bewertet.",
+      "rules": {
+        "sast": "Exponiertes Geheimnis (SAST):",
+        "sastVal": "Automatische Note F",
+        "critical": "Kritische Bedrohung:",
+        "criticalVal": "+25 Punkte",
+        "high": "Hohe Bedrohung:",
+        "highVal": "+15 Punkte",
+        "moderate": "Mittlere Bedrohung:",
+        "moderateVal": "+5 Punkte",
+        "low": "Niedrige Bedrohung:",
+        "lowVal": "+2 Punkte",
+        "outdated": "Veraltetes Paket:",
+        "outdatedVal": "+1 Punkt"
+      },
+      "grades": {
+        "a": "A (0 Pkt)",
+        "aDesc": "Sauberes und aktualisiertes System.",
+        "b": "B (1 - 20 Pkt)",
+        "bDesc": "Warnung. Leichte technische Schulden.",
+        "c": "C (21 - 50 Pkt)",
+        "cDesc": "Mittleres Risiko.",
+        "d": "D (51 - 80 Pkt)",
+        "dDesc": "Hohes Risiko. Vorrangige Maßnahme erforderlich.",
+        "f": "F (81+ Pkt oder SAST)",
+        "fDesc": "Kritisches Risiko. Sofortiges Eingreifen."
+      }
+    }
+  },
+  "projectCard": {
+    "remoteBadge": "Remote",
+    "cleanStatus": "Sauber",
+    "btnUpgradeGui": "Upgrade",
+    "upgradeAction": "Paket Upgrade"
+  },
+  "upgradeModal": {
+    "title": "Update-Manager",
+    "close": "SCHLIESSEN",
+    "emptyState": "Keine Tech Debt gefunden. Alle Pakete sind auf dem neuesten Stand.",
+    "table": {
+      "package": "Paket",
+      "current": "Aktuell",
+      "target": "Latest (Ziel)"
+    },
+    "btnForceAll": "Alle Updates Erzwingen",
+    "btnUpdateSelected": "Ausgewählte Aktualisieren ({{count}})"
+  },
+  "settingsModal": {
+    "title": "Systemeinstellungen",
+    "scanIntervalLabel": "Scan-Intervall (Hintergrund)",
+    "scanIntervalDesc": "Definiert, wie oft Sentinel Forge zugeordnete Projekte leise im Hintergrund auf neue Schwachstellen prüft.",
+    "btnApplyClose": "Anwenden & Schließen",
+    "intervals": {
+      "1m": "1 Minute (Test / Debug)",
+      "1h": "1 Stunde (Unternehmensstandard)",
+      "6h": "6 Stunden (Ressourcen-Balance)",
+      "12h": "12 Stunden (Täglicher Scan)",
+      "24h": "24 Stunden (Maximale Einsparung)"
+    }
+  },
+  "loader": {
+    "step1": "SecOps-Engine wird initialisiert...",
+    "step2": "IPC-Brücke wird aufgebaut...",
+    "step3": "Intelligence-Module werden geladen...",
+    "step4": "Betriebssysteme laufen.",
+    "subtitle": "Sicherheitsinfrastruktur",
+    "builtBy": "erstellt von DevChavatte"
+  },
+  "projectStats": {
+    "telemetry": "Telemetrie:",
+    "emptyStateLine1": "Noch keine Telemetriedaten erfasst.",
+    "emptyStateLine2": "Führen Sie ein Sicherheitsaudit durch.",
+    "lastScans": "Letzte 5 Scans",
+    "tooltipReport": "Klicken, um den forensischen Bericht zu öffnen",
+    "levels": {
+      "critical": "KRITISCH",
+      "high": "HOCH",
+      "moderate": "MITTEL",
+      "low": "NIEDRIG",
+      "outdated": "VERALTET"
+    },
+    "tags": {
+      "clean": "SAUBER",
+      "vuln": "{{count}} VULN",
+      "outdated": "{{count}} VERALTET"
+    }
+  },
+  "semver": {
+    "major": "MAJOR",
+    "minor": "MINOR",
+    "patch": "PATCH"
+  },
+  "socMonitor": {
+    "unknownProject": "ein zugeordnetes Projekt",
+    "alertTitle": "⚠️ SecOps Alarm (Hintergrund)",
+    "alertBody": "Sentinel hat {{count}} latente Schwachstelle(n) im Repository {{project}} erkannt."
+  },
+  "titlebar": {
+    "appTitle": "Sentinel Forge",
+    "appSubtitle": "Taktisches EDR",
+    "minimize": "Minimieren",
+    "maximize": "Maximieren / Wiederherstellen",
+    "close": "Engine Herunterfahren"
+  },
+  "reports": {
+    "unknownRepo": "Unbekanntes Repository",
+    "defaultWorkspace": "Standard-Workspace",
+    "workspaceLabel": "Workspace",
+    "repositoryLabel": "Repository",
+    "scanDateLabel": "Scan-Datum",
+    "issueDateLabel": "Ausstellungsdatum",
+    "cleanSystemTitle": "✅ SAUBERES SYSTEM",
+    "cleanSystemDesc": "Keine Geheimnisse, Bedrohungen oder veraltete Pakete erkannt.",
+    "sastTitle": "🕵️ Exponierte Geheimnisse (SAST)",
+    "sastHeaders": {
+      "alert": "Alarm",
+      "type": "Anmeldeinformation",
+      "location": "Standort",
+      "value": "Wert (Maskiert)"
+    },
+    "cveTitle": "🚨 Bedrohungsübersicht (CVE)",
+    "cveHeaders": {
+      "severity": "Schweregrad",
+      "packageVector": "Paket / Vektor",
+      "vulnRef": "Schwachstelle & Ref",
+      "mitigation": "Minderung"
+    },
+    "outdatedTitle": "⚠️ Technische Schulden (Veraltete Pakete)",
+    "outdatedHeaders": {
+      "package": "Paket",
+      "current": "Aktuelle Version",
+      "wanted": "Erwartet",
+      "latest": "Neueste"
+    },
+    "tacticalReportTitle": "Taktischer Audit-Bericht",
+    "consolidatedReportTitle": "Konsolidierter Executive-Bericht",
+    "noTelemetry": "Keine Telemetriedaten",
+    "telemetryStatusTitle": "Telemetriestatus nach Repository",
+    "telemetryHeaders": {
+      "repository": "Repository",
+      "sast": "SAST",
+      "critical": "Kritisch",
+      "high": "Hoch",
+      "moderate": "Mittel",
+      "low": "Niedrig",
+      "info": "Info",
+      "outdated": "Veraltet"
+    },
+    "target": "🎯 Ziel:",
+    "telemetryXrayTitle": "Telemetrie-Röntgenbild nach Repository",
+    "footer": "Taktischer Bericht erstellt von der <strong>{{title}} EDR</strong> Engine. © {{year}} DeVChavatte.",
+    "sastTag": "GEHEIMNIS (SAST)",
+    "line": "Zeile",
+    "unspecifiedVuln": "Unspezifizierte Schwachstelle",
+    "noPatch": "Kein bekannter Patch",
+    "updateTo": "Aktualisieren auf",
+    "availableViaAuditFix": "Verfügbar über audit fix",
+    "officialAdvisory": "🔗 Offizielles Advisory",
+    "directDependency": "Direkte Abhängigkeit",
+    "transitive": "Transitiv",
+    "via": "via",
+    "multiple": "mehrere",
+    "introducedBy": "🕵️ Eingeführt von:"
+  },
+  "updater": {
+    "newUpdate": "Neues Update",
+    "readyToInstall": "Bereit zur Installation. Die SOC-Engine wird neu gestartet.",
+    "restart": "Neustart",
+    "upToDate": "Auf dem neuesten Stand",
+    "upToDateDesc": "Sie verwenden die aktuellste Version."
+  }
+}

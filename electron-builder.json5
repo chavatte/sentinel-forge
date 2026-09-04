@@ -1,0 +1,63 @@
+{
+  $schema: "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
+  appId: "com.sentinelforge.app",
+  productName: "Sentinel Forge",
+  asar: true,
+  directories: {
+    output: "release/${version}",
+  },
+  files: ["dist", "dist-electron"],
+  extraResources: [
+    {
+      from: "public",
+      to: "public",
+      filter: ["**/*"]
+    }
+  ],
+  win: {
+    target: [{ target: "nsis", arch: ["x64"] }],
+    artifactName: "${productName}-Windows-${version}-Setup.${ext}",
+    icon: "public/sentinel.ico",
+  },
+  nsis: {
+    oneClick: false,
+    perMachine: true,
+    allowToChangeInstallationDirectory: true,
+    deleteAppDataOnUninstall: true,
+    createDesktopShortcut: true,
+    createStartMenuShortcut: true,
+    shortcutName: "Sentinel Forge",
+    license: "public/license.rtf",
+    installerSidebar: "public/installerSidebar.bmp",
+    uninstallerSidebar: "public/uninstallerSidebar.bmp",
+  },
+  linux: {
+    target: [
+      { target: "AppImage", arch: ["x64"] },
+      { target: "deb", arch: ["x64"] },
+    ],
+    artifactName: "${productName}-Linux-${version}.${ext}",
+    icon: "public/sentinel.png",
+    category: "Development",
+  },
+  mac: {
+    target: [
+      { target: "dmg", arch: ["x64", "arm64"] },
+      { target: "zip", arch: ["x64", "arm64"] }
+    ],
+    artifactName: "${productName}-macOS-${version}.${ext}",
+    icon: "public/sentinel.icns",
+    category: "public.app-category.developer-tools"
+  },
+  dmg: {
+    title: "Install Sentinel Forge",
+    sign: false
+  },
+  publish: [
+    {
+      provider: "github",
+      owner: "chavatte",
+      repo: "sentinel-forge"
+    }
+  ]
+}

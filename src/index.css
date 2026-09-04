@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import 'xterm/css/xterm.css';
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #334155;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #475569;
+}
+
+.xterm-viewport::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+.xterm-viewport::-webkit-scrollbar-thumb {
+  background-color: #21262d;
+  border: 1px solid #0d1117;
+  border-radius: 4px;
+}
+
+.xterm-viewport::-webkit-scrollbar-thumb:hover {
+  background-color: #30363d;
+}
+
+@keyframes pulse-glow-img {
+  0%, 100% { filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.2)); }
+  50% { filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.8)); }
+}
+
+@keyframes loader-indeterminate {
+  0% { left: -40%; width: 30%; }
+  50% { left: 35%; width: 50%; }
+  100% { left: 100%; width: 30%; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow-img 2s infinite ease-in-out !important;
+}
+
+.animate-loader-indeterminate {
+  animation: loader-indeterminate 1.5s infinite ease-in-out !important;
+}

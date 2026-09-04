@@ -1,0 +1,308 @@
+{
+  "sidebar": {
+    "title": "Sentinel Forge",
+    "subtitle": "依赖管理中心",
+    "tooltipAdd": "映射新存储库",
+    "emptyState": "未映射任何工作区。\n点击 + 按钮添加。",
+    "removeTooltip": "删除工作区",
+    "groupMaintenance": "维护",
+    "groupAudit": "审计与更新",
+    "btnDedupe": "去重 (Dedupe)",
+    "btnSync": "强制同步",
+    "btnClean": "清除缓存",
+    "btnOutdated": "检查过期包",
+    "btnUpgrade": "升级包",
+    "btnUpgradeLatest": "升级 (最新版本)",
+    "btnAddLocal": "本地文件夹",
+    "btnAddRemote": "Git URL",
+    "modalRemoteTitle": "映射远程存储库",
+    "modalCancel": "取消",
+    "modalConnect": "连接",
+    "modalPrivate": "私有存储库 (SSH认证)",
+    "modalSshPlaceholder": "密钥路径 (例如: ~/.ssh/id_rsa)",
+    "btnSelect": "浏览",
+    "exportGlobal": "全局导出",
+    "newWorkspaceBtn": "+ 创建新工作区",
+    "createWorkspaceTitle": "新工作区名称",
+    "createWorkspacePlaceholder": "例如：产品线、客户X",
+    "btnCreateWorkspace": "创建工作区",
+    "destroyWarningTitle": "警告：破坏性操作",
+    "destroyWarningText1": "您确定要删除此工作区",
+    "destroyWarningText2": "并移除所有关联的项目吗？",
+    "btnDestroyAll": "销毁全部",
+    "remoteBadge": "远程",
+    "openDocs": "打开官方文档"
+  },
+  "emptyState": {
+    "waiting": "等待目标选择..."
+  },
+  "terminal": {
+    "bootEngine": "审计引擎已初始化。",
+    "bootIpc": "IPC 护盾运行中。等待命令...",
+    "apiError": "Preload API 不可用 (window.api)。请检查主进程中的 contextIsolation 策略。",
+    "standby": "待机中",
+    "running": "正在执行原生线程...",
+    "clearConsole": "清除控制台",
+    "minimize": "最小化终端",
+    "maximize": "最大化终端",
+    "criticalErrorPrefix": "[致命错误]:"
+  },
+  "messages": {
+    "apiError": "\n[错误]: Electron API 不可用。\n",
+    "alreadyMapped": "\n[警告]: 目录 {{path}} 已映射。\n",
+    "workspaceAdded": "\n[系统]: 已添加工作区: {{name}} [检测到: {{manager}}]\n",
+    "workspaceRemoved": "\n[系统]: 已移除工作区: {{name}}\n",
+    "startingCommand": "\n[系统]: 正在通过 {{manager}} 启动 {{action}} 于:\n📂 {{path}}\n---",
+    "auditComplete": "\n[系统]: 安全审计完成。正在渲染战术仪表板...\n",
+    "auditError": "\n[审计错误]: {{error}}\n",
+    "exportSuccessTitle": "导出成功",
+    "exportSuccessBody": "已保存为 {{format}}。",
+    "exportCLevelTitle": "高管报告",
+    "exportCLevelBody": "工作区报告已导出为 {{format}}。",
+    "exportSbomTitle": "企业合规",
+    "exportSbomBody": "CycloneDX SBOM 生成并导出成功！",
+    "exportErrorTitle": "导出错误",
+    "exportErrorBody": "尝试导出工作区报告时失败。",
+    "cacheError": "读取项目缓存失败。",
+    "settingsError": "读取设置失败，正在恢复默认设置。"
+  },
+  "actions": {
+    "dedupeName": "去重处理",
+    "syncName": "强制安装",
+    "cleanName": "缓存清理",
+    "outdatedName": "检查过期包",
+    "upgradeName": "包升级",
+    "upgradeLatestName": "升级至最新版本",
+    "auditName": "SecOps 扫描",
+    "auditFixName": "威胁自动修复"
+  },
+  "dashboard": {
+    "radarTitle": "威胁与技术债务雷达",
+    "tacticalTitle": "战术仪表板",
+    "close": "关闭",
+    "defaultWorkspace": "默认工作区",
+    "unknownRepo": "未知存储库",
+    "exportLabel": "导出报告:",
+    "tabs": {
+      "overview": "概览",
+      "cve": "安全威胁",
+      "outdated": "技术债务",
+      "sast": "凭据泄漏 (SAST)"
+    },
+    "overview": {
+      "riskScore": "全局风险评分",
+      "sastCard": "代码中的机密 (SAST)",
+      "btnViewFiles": "查看文件",
+      "btnMethodology": "阅读方法论",
+      "levels": {
+        "critical": "严重",
+        "high": "高危",
+        "moderate": "中危",
+        "low": "低危",
+        "info": "信息",
+        "outdated": "已过期"
+      }
+    },
+    "cve": {
+      "btnAutoFix": "尝试自动修复 (Fix)",
+      "safe": "系统安全。未检测到威胁。",
+      "vector": "攻击向量",
+      "direct": "直接依赖",
+      "transitive": "传递依赖",
+      "origin": "来源",
+      "introducedBy": "引入者",
+      "mitigation": "缓解措施",
+      "updateTo": "更新至",
+      "manualFix": "需要手动修复",
+      "advisory": "官方安全公告",
+      "sourceOsv": "由 OSV.dev 全球数据库 (Google) 检测到的威胁",
+      "sourceLocal": "由本地包管理器检测到的威胁"
+    },
+    "sast": {
+      "safe": "代码安全。未暴露任何机密或凭据。",
+      "alert": "严重警告：硬编码凭据",
+      "line": "行号",
+      "file": "文件",
+      "foundValue": "发现的值"
+    },
+    "outdated": {
+      "package": "包名",
+      "current": "当前版本",
+      "wanted": "期望版本 (Wanted)",
+      "latest": "最新版本 (Latest)",
+      "safe": "无技术债务！所有包均已更新。"
+    },
+    "methodology": {
+      "title": "评估方法论 (风险评分)",
+      "description": "风险评分是一个对数指数（0 到 100），用于评估存储库的结构和安全健康状况。分数越高，干预的需求就越迫切。",
+      "rules": {
+        "sast": "暴露的机密 (SAST):",
+        "sastVal": "自动判定为 F 级",
+        "critical": "严重威胁:",
+        "criticalVal": "+25 分",
+        "high": "高危威胁:",
+        "highVal": "+15 分",
+        "moderate": "中危威胁:",
+        "moderateVal": "+5 分",
+        "low": "低危威胁:",
+        "lowVal": "+2 分",
+        "outdated": "过期的包:",
+        "outdatedVal": "+1 分"
+      },
+      "grades": {
+        "a": "A (0 分)",
+        "aDesc": "系统干净且已更新。",
+        "b": "B (1 - 20 分)",
+        "bDesc": "警告。轻微的技术债务。",
+        "c": "C (21 - 50 分)",
+        "cDesc": "中度风险。",
+        "d": "D (51 - 80 分)",
+        "dDesc": "高风险。需要优先采取行动。",
+        "f": "F (81+ 分 或 SAST)",
+        "fDesc": "严重风险。必须立即干预。"
+      }
+    }
+  },
+  "projectCard": {
+    "remoteBadge": "远程",
+    "cleanStatus": "安全",
+    "btnUpgradeGui": "升级",
+    "upgradeAction": "包升级"
+  },
+  "upgradeModal": {
+    "title": "更新管理器",
+    "close": "关闭",
+    "emptyState": "未发现技术债务。所有包均已是最新版本。",
+    "table": {
+      "package": "包名",
+      "current": "当前版本",
+      "target": "目标版本 (Latest)"
+    },
+    "btnForceAll": "强制升级全部",
+    "btnUpdateSelected": "升级选定项 ({{count}})"
+  },
+  "settingsModal": {
+    "title": "系统设置",
+    "scanIntervalLabel": "扫描间隔 (后台)",
+    "scanIntervalDesc": "定义 Sentinel Forge 在后台静默审计已映射项目以查找新漏洞和关键 CVE 的频率。",
+    "btnApplyClose": "应用并关闭",
+    "intervals": {
+      "1m": "1 分钟 (测试 / 调试模式)",
+      "1h": "1 小时 (企业标准)",
+      "6h": "6 小时 (资源平衡)",
+      "12h": "12 小时 (每日扫描)",
+      "24h": "24 小时 (最大化节能)"
+    }
+  },
+  "loader": {
+    "step1": "正在初始化 SecOps 引擎...",
+    "step2": "正在建立 IPC 桥接...",
+    "step3": "正在加载智能分析模块...",
+    "step4": "操作系统运行中。",
+    "subtitle": "安全基础设施",
+    "builtBy": "由 DevChavatte 构建"
+  },
+  "projectStats": {
+    "telemetry": "遥测数据:",
+    "emptyStateLine1": "尚未捕获任何遥测数据。",
+    "emptyStateLine2": "运行安全审计以开始追踪。",
+    "lastScans": "最近 5 次审计记录",
+    "tooltipReport": "点击打开完整取证报告",
+    "levels": {
+      "critical": "严重",
+      "high": "高危",
+      "moderate": "中危",
+      "low": "低危",
+      "outdated": "已过期"
+    },
+    "tags": {
+      "clean": "安全",
+      "vuln": "{{count}} 个漏洞",
+      "outdated": "{{count}} 个过期"
+    }
+  },
+  "semver": {
+    "major": "重大更新 (MAJOR)",
+    "minor": "次要更新 (MINOR)",
+    "patch": "补丁 (PATCH)"
+  },
+  "socMonitor": {
+    "unknownProject": "已映射项目",
+    "alertTitle": "⚠️ SecOps 警报 (后台)",
+    "alertBody": "Sentinel 在存储库 {{project}} 中检测到 {{count}} 个潜在漏洞。"
+  },
+  "titlebar": {
+    "appTitle": "Sentinel Forge",
+    "appSubtitle": "战术 EDR",
+    "minimize": "最小化",
+    "maximize": "最大化 / 还原",
+    "close": "关闭引擎"
+  },
+  "reports": {
+    "unknownRepo": "未知存储库",
+    "defaultWorkspace": "默认工作区",
+    "workspaceLabel": "工作区",
+    "repositoryLabel": "存储库",
+    "scanDateLabel": "扫描日期",
+    "issueDateLabel": "签发日期",
+    "cleanSystemTitle": "✅ 系统安全",
+    "cleanSystemDesc": "未检测到机密、安全威胁 (CVE) 或过期包。",
+    "sastTitle": "🕵️ 暴露的机密 (SAST)",
+    "sastHeaders": {
+      "alert": "警报",
+      "type": "凭据类型",
+      "location": "位置",
+      "value": "值 (已脱敏)"
+    },
+    "cveTitle": "🚨 威胁明细 (CVE)",
+    "cveHeaders": {
+      "severity": "严重程度",
+      "packageVector": "包名 / 攻击向量",
+      "vulnRef": "漏洞及参考",
+      "mitigation": "缓解建议"
+    },
+    "outdatedTitle": "⚠️ 技术债务 (过期的包)",
+    "outdatedHeaders": {
+      "package": "包名",
+      "current": "当前版本",
+      "wanted": "期望版本",
+      "latest": "最新版本"
+    },
+    "tacticalReportTitle": "战术审计报告",
+    "consolidatedReportTitle": "综合高管报告",
+    "noTelemetry": "无遥测数据",
+    "telemetryStatusTitle": "各存储库遥测状态",
+    "telemetryHeaders": {
+      "repository": "存储库",
+      "sast": "SAST",
+      "critical": "严重",
+      "high": "高危",
+      "moderate": "中危",
+      "low": "低危",
+      "info": "信息",
+      "outdated": "过期包"
+    },
+    "target": "🎯 目标:",
+    "telemetryXrayTitle": "各存储库遥测透视",
+    "footer": "战术报告由 <strong>{{title}} EDR</strong> 引擎生成。 © {{year}} DeVChavatte.",
+    "sastTag": "机密 (SAST)",
+    "line": "行号",
+    "unspecifiedVuln": "未指明的漏洞",
+    "noPatch": "无已知补丁",
+    "updateTo": "更新至",
+    "availableViaAuditFix": "可通过 audit fix 修复",
+    "officialAdvisory": "🔗 官方安全公告",
+    "directDependency": "直接依赖",
+    "transitive": "传递依赖",
+    "via": "通过",
+    "multiple": "多个",
+    "introducedBy": "🕵️ 引入者:"
+  },
+  "updater": {
+    "newUpdate": "新更新",
+    "readyToInstall": "已准备好安装。SOC 引擎将重启。",
+    "restart": "重启",
+    "upToDate": "已是最新",
+    "upToDateDesc": "您正在运行最新版本。"
+  }
+}

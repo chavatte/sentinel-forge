@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentinel Forge - Official Documentation</title>
+    <link rel="icon" type="image/x-icon" href="./sentinel.ico" />
+    <link rel="stylesheet" href="./help/help.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="brand">
+        <img
+          src="./sentinel.png"
+          alt="Sentinel Forge Logo"
+          class="brand-logo"
+        />
+        Sentinel Forge
+      </div>
+      <span class="brand-subtitle">Tactical EDR</span>
+      <ul>
+        <li><a href="#introduction" data-i18n="nav_1">1. Introduction</a></li>
+        <li>
+          <a href="#workspaces" data-i18n="nav_2">2. Workspace Management</a>
+        </li>
+        <li>
+          <a href="#audit-engine" data-i18n="nav_3">3. Security Audit Engine</a>
+        </li>
+        <li>
+          <a href="#maintenance" data-i18n="nav_4">4. Maintenance Commands</a>
+        </li>
+        <li>
+          <a href="#risk-score" data-i18n="nav_5">5. Risk Score Methodology</a>
+        </li>
+        <li>
+          <a href="#reports" data-i18n="nav_6">6. Compliance & Reporting</a>
+        </li>
+        <li><a href="#soc-monitor" data-i18n="nav_7">7. SOC Monitor</a></li>
+      </ul>
+    </nav>
+    <main>
+      <select
+        id="langSwitcher"
+        class="lang-switcher"
+        onchange="changeLanguage(this.value)"
+      >
+        <option value="en">English</option>
+        <option value="pt">Português</option>
+        <option value="es">Español</option>
+        <option value="de">Deutsch</option>
+        <option value="ru">Русский</option>
+        <option value="zh">中文</option>
+      </select>
+      <section id="introduction">
+        <h1 data-i18n="title">Sentinel Forge Documentation</h1>
+        <p data-i18n="intro_1">
+          Welcome to <strong>Sentinel Forge</strong>. This is a comprehensive
+          Tactical Endpoint Detection and Response (EDR) tool and Dependency Hub
+          designed specifically for Node.js ecosystems (NPM, Yarn, PNPM).
+        </p>
+        <div class="terminal-block">
+          root@sentinel-forge:/secops# ./engine --status<br />
+          <span data-i18n="term_1">[OK] Audit Engine Initialized.</span><br />
+          <span data-i18n="term_2">[OK] IPC Shield Operational.</span>
+        </div>
+      </section>
+      <section id="workspaces">
+        <h2 data-i18n="sec2_title">2. Workspace Management</h2>
+        <p data-i18n="sec2_desc">
+          Sentinel Forge allows you to map and monitor multiple repositories
+          simultaneously.
+        </p>
+        <div class="card">
+          <h4 data-i18n="sec2_c1_title">📂 Local & Remote Git</h4>
+          <p data-i18n="sec2_c1_desc">
+            Map local folders or clone remote repositories securely using Git
+            Sparse-Checkout (SSH Authentication supported).
+          </p>
+        </div>
+      </section>
+      <section id="audit-engine">
+        <h2 data-i18n="sec3_title">3. Security Audit Engine</h2>
+        <p data-i18n="sec3_desc">
+          The core relies on Triple-Scan Technology (Local + Global + SAST).
+        </p>
+        <h3 data-i18n="sec3_osv">OSV.dev Global Database</h3>
+        <p data-i18n="sec3_osv_desc">
+          Cross-references your direct and transitive dependencies against
+          Google's Open Source Vulnerabilities database for maximum coverage.
+        </p>
+        <h3 data-i18n="sec3_cve">Local Scanner (CVE & Tech Debt)</h3>
+        <p data-i18n="sec3_cve_desc">
+          Queries vulnerability databases and compares current packages to
+          identify outdated versions.
+        </p>
+        <h3 data-i18n="sec3_sast">SAST (Secrets Scan)</h3>
+        <p data-i18n="sec3_sast_desc">
+          Deep file sweep to detect hardcoded secrets (AWS, GitHub, SSH Keys,
+          Stripe, etc.) in the source code.
+        </p>
+        <p
+          data-i18n="sec3_sast_custom"
+          style="
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 0.5rem;
+            border-left: 2px solid #06b6d4;
+            padding-left: 10px;
+          "
+        >
+          * Supports Custom Regex Rules configured via System Settings.
+        </p>
+      </section>
+      <section id="maintenance">
+        <h2 data-i18n="sec4_title">4. Maintenance Commands</h2>
+        <p data-i18n="sec4_desc">
+          Execute secure package manager commands via the IPC Shield.
+        </p>
+        <ul>
+          <li data-i18n="sec4_l1">
+            <strong>Deduplicate:</strong> Cleans up lockfile conflicts.
+          </li>
+          <li data-i18n="sec4_l2">
+            <strong>Force Sync:</strong> Clean install of dependencies.
+          </li>
+          <li data-i18n="sec4_l3">
+            <strong>Auto-Remediation:</strong> Attempts to auto-patch
+            vulnerabilities.
+          </li>
+          <li data-i18n="sec4_l4">
+            <strong>Sentinel Git-OPS:</strong> Automatically commits and pushes
+            security patches for remote repositories.
+          </li>
+        </ul>
+      </section>
+      <section id="risk-score">
+        <h2 data-i18n="sec5_title">5. Risk Score Methodology</h2>
+        <p data-i18n="sec5_desc">
+          A logarithmic index (0-100) evaluating structural security health.
+        </p>
+        <div class="card" style="border-left: 4px solid var(--red)">
+          <h4 class="danger" data-i18n="sec5_sast">SAST Penalty</h4>
+          <p data-i18n="sec5_sast_desc">
+            Any exposed secret immediately grants an automatic Grade F.
+          </p>
+        </div>
+        <ul>
+          <li data-i18n="sec5_l1"><strong>A (0 pts):</strong> Clean System.</li>
+          <li data-i18n="sec5_l2">
+            <strong>B to C:</strong> Light to Moderate Debt.
+          </li>
+          <li data-i18n="sec5_l3">
+            <strong>D to F:</strong> High to Severe Risk (Intervention
+            required).
+          </li>
+        </ul>
+      </section>
+      <section id="reports">
+        <h2 data-i18n="sec6_title">6. Compliance & Reporting</h2>
+        <p data-i18n="sec6_desc">
+          Export C-Level PDF/HTML reports or generate CycloneDX SBOMs for
+          enterprise supply-chain security.
+        </p>
+      </section>
+      <section id="soc-monitor">
+        <h2 data-i18n="sec7_title">7. Background SOC Monitor</h2>
+        <p data-i18n="sec7_desc">
+          Continuously monitors mapped repositories. Triggers native OS
+          notifications if critical threats are introduced.
+        </p>
+      </section>
+      <footer
+        style="
+          margin-top: 5rem;
+          padding-top: 2rem;
+          border-top: 1px solid var(--border-color);
+          text-align: center;
+          color: var(--text-muted);
+          font-size: 0.85rem;
+        "
+        data-i18n="footer"
+      >
+        &copy; 2026 Sentinel Forge EDR. Built for modern DevSecOps.
+      </footer>
+    </main>
+    <script src="./help/dict.js"></script>
+    <script src="./help/help.js"></script>
+  </body>
+</html>
