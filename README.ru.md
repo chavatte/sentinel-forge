@@ -31,6 +31,7 @@ _____________|','   ///_/-------------/   |                 \_/_________________
 
 ### Тактическое обнаружение и реагирование на угрозы конечных точек для безопасности разработчиков
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22819933.svg)](https://doi.org/10.5281/zenodo.22819933)
 [![Version](https://img.shields.io/badge/version-1.0.8-0f172a.svg)](https://github.com/chavatte/sentinel-forge/releases)
 [![Electron](https://img.shields.io/badge/Electron-43-47848F?logo=electron&logoColor=white)](https://www.electronjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=111827)](https://react.dev/)
