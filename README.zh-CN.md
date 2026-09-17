@@ -31,7 +31,7 @@ _____________|','   ///_/-------------/   |                 \_/_________________
 
 ### 面向开发者安全的战术事件检测与响应
 
-[![Version](https://img.shields.io/badge/version-1.0.7-0f172a.svg)](https://github.com/chavatte/sentinel-forge/releases)
+[![Version](https://img.shields.io/badge/version-1.0.8-0f172a.svg)](https://github.com/chavatte/sentinel-forge/releases)
 [![Electron](https://img.shields.io/badge/Electron-43-47848F?logo=electron&logoColor=white)](https://www.electronjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=111827)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
