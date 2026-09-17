@@ -3,7 +3,7 @@
   "private": true,
   "productName": "Sentinel Forge",
   "desktopName": "Sentinel Forge",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Tactical EDR and Supply Chain Security SOC",
   "author": "DevChavatte <chavatte@duck.com>",
   "type": "module",
